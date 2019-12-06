@@ -161,9 +161,9 @@ export default {
         password: ''
       },
       registerForm: {
-        name: 'hhhhhh',
-        password: 'hhhhhh',
-        email: 'mypridelife@qq.com'
+        name: '',
+        password: '',
+        email: ''
       },
       // 参数校验
       nameRules: [

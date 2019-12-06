@@ -11,13 +11,13 @@ const opts = {
   theme: {
     themes: {
       light: {
-        layoutBar: '#009688', // 主题色
+        layoutBar: '#ffffff', // 主题色
         primary: '#009688', // 主题色
-        layoutBg: '#E6A23C',
-        primaryText: '#ffffff',
+        layoutBg: '#ffffff',
+        primaryText: '#212121',
         secondText: '#909399',
-        primaryIcon: '#ffffff',
-        divider: '#E6A23C',
+        primaryIcon: '#26A69A',
+        divider: '#ffffff',
         bgColor: '#ffffff',
 
         localeS: '#009688',

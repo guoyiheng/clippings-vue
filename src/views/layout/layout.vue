@@ -8,6 +8,7 @@
   <v-app id="inspire">
     <v-app-bar
       app
+      clipped-left
       :elevate-on-scroll="elevateOnScroll"
       color="layoutBar"
       class="my-header"
@@ -55,9 +56,9 @@
     <v-navigation-drawer
       v-model="drawer"
       app
+      clipped
       color="layoutBg"
       class="my-navigation"
-      touchless
       @touchmove.prevent
     >
       <v-list dense>

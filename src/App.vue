@@ -11,4 +11,8 @@ export default {
 }
 </script>
 
-<style scoped lang="scss" type="text/css"></style>
+<style lang="scss" type="text/css">
+.v-navigation-drawer__border {
+  background-color: #ffffff !important;
+}
+</style>
