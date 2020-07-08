@@ -1,5 +1,5 @@
 <!--
-  功能：我喜欢
+  收藏
   作者：gyh
   时间：2019年11月06日 14:11:40
   版本：v1.0
@@ -12,7 +12,7 @@
           <div class="clippings-content">
             <div v-if="baseData.length !== 0" class="clippings-list">
               <div v-if="!queryloading">
-                <span class="title">{{ $t('layout.favorite') }}</span>
+                <!-- <span class="title">{{ $t('layout.favorite') }}</span> -->
                 <div v-for="(item, index) in baseData" :key="index">
                   <book-card :book-data="item" @remove-item="handleDelete" />
                 </div>

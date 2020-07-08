@@ -53,11 +53,11 @@
           <div ref="bookListRef" class="clippings-content">
             <div v-if="baseData.length !== 0" class="clippings-list">
               <div v-if="!queryloading">
-                <span class="title">{{
+                <!-- <span class="title">{{
                   book === 0 || !book
                     ? $t('clippings.allBook')
                     : bookList[book].bookName
-                }}</span>
+                }}</span> -->
                 <div v-for="(item, index) in baseData" :key="index">
                   <book-card :book-data="item" @remove-item="handleDelete" />
                 </div>
@@ -143,8 +143,6 @@ export default {
     book(n, o) {
       const that = this
       if (n === 0 || !n) {
-        console.log('===')
-
         this.handleQuery(this.currentPage, this.count, () => {
           this.$vuetify.goTo(this.$refs.bookListRef, {
             easings: 'easeInOutCubic',
