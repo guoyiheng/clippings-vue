@@ -29,7 +29,8 @@ module.exports = {
     },
     proxy: {
       '/api': {
-        target: 'https://api.guoyiheng.xyz',
+        // target: 'https://api.guoyiheng.xyz',
+        target: 'http://127.0.0.1:8000',
         ws: true,
         changeOrigin: true
       }
@@ -43,5 +44,18 @@ module.exports = {
     },
     devtool: 'source-map'
   },
+  //   chainWebpack: config => {
+  //     // GraphQL Loader
+  //     config.module
+  //       .rule('graphql')
+  //       .test(/\.graphql$/)
+  //       .use('graphql-tag/loader')
+  //       .loader('graphql-tag/loader')
+  //       .end()
+  //       // 你还可以再添加一个 loader
+  //       .use('other-loader')
+  //       .loader('other-loader')
+  //       .end()
+  //   },
   transpileDependencies: ['vuetify']
 }

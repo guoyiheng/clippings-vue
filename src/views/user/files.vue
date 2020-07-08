@@ -26,7 +26,6 @@
       <v-btn
         block
         color="primary"
-        class="primaryText--text"
         :loading="uploadloading"
         @click="handleUpload()"
       >

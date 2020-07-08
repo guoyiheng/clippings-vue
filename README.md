@@ -8,7 +8,7 @@
 
 有兴趣的同学可访问
 
-[https://www.guoyiheng.xyz](https://www.guoyiheng.xyz)
+:link:[https://wwww.guoyiheng.xyz](https://wwww.guoyiheng.xyz)
 
 (可正常走注册登录流程，也可使用测试账号，账号：111111 密码：111111)
 
@@ -16,7 +16,7 @@
 
 有条件的同学可导入自己的剪报进行测试，不方便的同学也可以在 **网站-帮助** 中下载示例文件进行解析。
 
-目前网站功能并不完善，只供测试使用，若有精力，会发一个正式使用的版本，欢迎提出建议和 bug!
+目前网站功能并不完善，只供测试使用，若有精力，会发一个正式使用的版本，欢迎提出建议和 :bug:！
 
 ### 1.2 使用说明
 
@@ -60,7 +60,7 @@ npm run dev
 
 ### 2.1 服务端
 
-[项目链接](https://github.com/mypridelife/clippings-koa)：https://github.com/mypridelife/clippings-koa
+项目链接：
 
 ### 2.2 技术栈
 
@@ -88,7 +88,7 @@ client:
 
 - [x] jekens 部署项目
 - [x] 登录注册页面
-- [x] 剪报搜索(手机端自适应隐藏，电脑端显示)
+- [x] 剪报搜索(:secret:手机端自适应隐藏，电脑端显示)
 - [x] 上传文件功能
 - [x] 文件列表页
 - [x] 文件增删改查
@@ -108,7 +108,7 @@ client:
 - [ ] 同步到有道云笔记
 - [ ] 用户信息完善
 
-### 2.3 技术要点
+### 2.3 :ring: 技术要点
 
 - Jenkins 部署
 - axios 封装
@@ -200,5 +200,7 @@ publicPath: env === 'development' ? '/' : 'https://xxx.xxx.xxx/',
 #### 2.4.1 侧边栏菜单
 
 可以抽离出来，单独配置在一个 js 文件中，通过 name 选项进入路由。
+
+---
 
 暂时想到这么多，待补充
