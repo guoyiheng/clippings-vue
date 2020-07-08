@@ -14,9 +14,8 @@
       class="my-header"
     >
       <v-app-bar-nav-icon class="primaryText--text" @click="drawer = !drawer" />
-      <span class="title ml-3 mr-5 primaryText--text">
+      <span class="title ml-3  primaryText--text">
         {{ $t('layout.titlePre') }} &nbsp;
-        <span class="font-weight-light" />
         {{ $t('layout.clippings') }}
       </span>
       <v-autocomplete
@@ -31,7 +30,7 @@
         :label="$t('layout.search')"
         solo-inverted
         prepend-inner-icon="search"
-        class="hidden-xs-only"
+        class="ml-5 hidden-xs-only"
         item-text="content"
         item-value="id"
       />
@@ -78,16 +77,20 @@
 
             <v-flex v-else xs12>
               <v-subheader
-                class="flex flex-column justify-center align-start"
+                class="flex  justify-start align-center"
                 style="height:140px;"
               >
-                <v-icon color="primaryIcon" @click="handleClickHeader">{{
-                  item.headerImg
-                }}</v-icon>
+                <v-icon
+                  color="primaryIcon"
+                  size="40"
+                  @click="handleClickHeader"
+                >
+                  {{ item.headerImg }}
+                </v-icon>
 
-                <span class="title mt-2 font-weight-bold primaryText--text">{{
-                  item.username
-                }}</span>
+                <div class="title  ml-2 font-weight-bold primaryText--text">
+                  {{ item.username }}
+                </div>
               </v-subheader>
             </v-flex>
           </v-layout>
@@ -148,21 +151,21 @@ export default {
     },
     menuItems() {
       return [
-        {
-          heading: 'user',
-          username: this.$store.getters.userInfo.name,
-          headerImg: 'person_pin'
-        },
+        // {
+        //   heading: 'user',
+        //   username: this.$store.getters.userInfo.name,
+        //   headerImg: 'person_pin'
+        // },
         { divider: true },
         { icon: 'folder', text: this.$t('layout.clippings') },
-        { icon: 'favorite', text: this.$t('layout.favorite') },
+        // { icon: 'favorite', text: this.$t('layout.favorite') },
         { divider: true },
         { heading: this.$t('layout.files') },
         { icon: 'cloud', text: this.$t('layout.history') },
         { divider: true },
         // { heading: '用户' },
-        { icon: 'person', text: this.$t('layout.person') },
-        { icon: 'settings', text: this.$t('layout.settings') },
+        // { icon: 'person', text: this.$t('layout.person') },
+        // { icon: 'settings', text: this.$t('layout.settings') },
         { icon: 'help', text: this.$t('layout.help') }
         // { divider: true }
         // { icon: 'delete', text: '垃圾箱' }
@@ -176,7 +179,6 @@ export default {
       }
     },
     select(n) {
-      console.log(n)
       this.$router.push({
         name: 'Clippings',
         query: {
@@ -192,7 +194,6 @@ export default {
      * 路由跳转
      */
     handleToPage(item) {
-      console.log(item)
       if (
         item.text === this.$t('layout.history') &&
         this.$route.name !== 'Files'

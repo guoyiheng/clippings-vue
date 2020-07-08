@@ -5,16 +5,8 @@
   版本：v1.0
 -->
 <template>
-  <div
-    v-if="show"
-    class="alert-container"
-  >
-    <v-alert
-      :type="type"
-      border="bottom"
-      colored-border
-      elevation="2"
-    >
+  <div v-if="show" class="alert-container">
+    <v-alert :type="type" border="bottom" colored-border elevation="2">
       {{ text }}
     </v-alert>
   </div>
@@ -50,17 +42,17 @@ export default {
 </script>
 
 <style scoped lang="scss" type="text/css">
-// .alert-container {
-//   width: 100%;
-//   height: 60px;
+.alert-container {
+  width: 90%;
+  //   height: 60px;
 
-//   position: fixed;
-//   top: 10px;
-//   left: 0px;
-//   z-index: 9999;
+  //   position: fixed;
+  //   top: 10px;
+  //   left: 0px;
+  //   z-index: 9999;
 
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+}
 </style>

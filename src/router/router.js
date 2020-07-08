@@ -81,7 +81,7 @@ const router = new Router({
           component: Favorite,
           name: 'Favorite',
           meta: {
-            title: '我喜欢',
+            title: '收藏',
             level: 1
           }
         }

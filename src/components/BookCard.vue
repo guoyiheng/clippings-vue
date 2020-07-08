@@ -1,84 +1,83 @@
 <template>
   <v-card class="mx-auto book-card-container" :loading="saveLoading" outlined>
     <v-card-text>
-      <v-container fluid>
-        <v-row>
-          <v-col cols="12" sm="3" class=" text--primary">
-            {{ baseData.bookName }}
-          </v-col>
-          <v-spacer />
-          <v-col cols="12" sm="5">
-            {{ baseData.addTime }}
-          </v-col>
-        </v-row>
+      <v-row>
+        <v-col cols="12" sm="4" class=" text--primary">
+          {{ baseData.bookName }}
+        </v-col>
+        <v-col cols="12" sm="5">
+          {{ baseData.author }}
+        </v-col>
+      </v-row>
 
-        <v-row>
-          <v-col cols="12" sm="3">
-            {{ baseData.author }}
-          </v-col>
-          <v-spacer />
-          <v-col cols="12" sm="5">
-            {{ $t('bookCard.loc') }} {{ baseData.location }}
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col v-if="!showEditContent" cols="12">
-            {{ baseData.content }}
-          </v-col>
-          <v-col v-else cols="12">
-            <v-textarea v-model="textarea" solo counter :rules="contentRule" />
-          </v-col>
-        </v-row>
+      <v-row>
+        <v-col cols="12" sm="4">
+          {{ baseData.addTime }}
+        </v-col>
+        <v-col cols="12" sm="5">
+          {{ $t('bookCard.loc') }} {{ baseData.location }}
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col v-if="!showEditContent" cols="12">
+          {{ baseData.content }}
+        </v-col>
+        <v-col v-else cols="12">
+          <v-textarea
+            v-model="textarea"
+            outlined
+            counter
+            :rules="contentRule"
+          />
+        </v-col>
+      </v-row>
 
-        <v-row v-if="showEditContent">
-          <v-col cols="3" sm="1">
-            <v-btn
-              color="primary"
-              text
-              icon
-              :loading="saveLoading"
-              @click="handleSaveContent"
-            >
-              <v-icon>check</v-icon>
-            </v-btn>
-          </v-col>
+      <v-row v-if="showEditContent">
+        <v-col cols="3" sm="1">
+          <v-btn
+            color="primary"
+            text
+            icon
+            :loading="saveLoading"
+            @click="handleSaveContent"
+          >
+            <v-icon>check</v-icon>
+          </v-btn>
+        </v-col>
 
-          <v-col cols="3" sm="1">
-            <v-btn color="error" text icon @click="handleCancleContent">
-              <v-icon>close</v-icon>
-            </v-btn>
-          </v-col>
-        </v-row>
-      </v-container>
+        <v-col cols="3" sm="1">
+          <v-btn color="error" text icon @click="handleCancleContent">
+            <v-icon>close</v-icon>
+          </v-btn>
+        </v-col>
+      </v-row>
     </v-card-text>
 
     <v-card-actions>
-      <v-container v-if="!showEditContent" fluid>
-        <v-row>
-          <v-col cols="3" sm="1">
-            <v-btn color="primary" text icon @click="handleEditContent">
-              <v-icon>mdi-pencil</v-icon>
-            </v-btn>
-          </v-col>
+      <v-row v-if="!showEditContent" fluid>
+        <v-col cols="3" sm="1">
+          <v-btn color="primary" text icon @click="handleEditContent">
+            <v-icon>mdi-pencil</v-icon>
+          </v-btn>
+        </v-col>
 
-          <v-col cols="3" sm="1">
-            <v-btn
-              text
-              icon
-              :color="baseData.favorite === 1 ? 'pink' : 'grey'"
-              :loading="favoriteLoading"
-              @click="handleEditFavorite"
-            >
-              <v-icon>mdi-heart</v-icon>
-            </v-btn>
-          </v-col>
-          <v-col cols="3" sm="1">
-            <v-btn color="warning" text icon @click="handleDelete">
-              <v-icon>delete</v-icon>
-            </v-btn>
-          </v-col>
-        </v-row>
-      </v-container>
+        <v-col cols="3" sm="1">
+          <v-btn
+            text
+            icon
+            :color="baseData.favorite === 1 ? 'pink' : 'grey'"
+            :loading="favoriteLoading"
+            @click="handleEditFavorite"
+          >
+            <v-icon>mdi-heart</v-icon>
+          </v-btn>
+        </v-col>
+        <v-col cols="3" sm="1">
+          <v-btn color="warning" text icon @click="handleDelete">
+            <v-icon>delete</v-icon>
+          </v-btn>
+        </v-col>
+      </v-row>
     </v-card-actions>
 
     <v-dialog v-model="dialog" max-width="290">
@@ -152,7 +151,7 @@ export default {
       updateOne(data)
         .then(result => {
           that.$message({
-            text: that.baseData.favorite === 1 ? '取消喜欢' : '添加到我喜欢',
+            text: that.baseData.favorite === 1 ? '取消收藏' : '添加到收藏',
             color: 'success'
           })
           that.baseData.favorite === 1
