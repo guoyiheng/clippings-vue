@@ -24,7 +24,7 @@ module.exports = {
     clippings: '剪报',
     search: '搜索',
     logout: '登出',
-    favorite: '我喜欢',
+    favorite: '收藏',
     files: '文件',
     history: '历史上传记录',
     person: '个人中心',

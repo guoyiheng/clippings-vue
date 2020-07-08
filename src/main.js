@@ -34,7 +34,17 @@ const i18n = new VueI18n({
   }
 })
 
-new Vue({
+import uweb from 'vue-uweb'
+let siteIdUWeb
+const env = process.env.NODE_ENV
+if (env === 'development') {
+  siteIdUWeb = '1278254360'
+} else {
+  siteIdUWeb = '1278254360'
+}
+Vue.use(uweb, { siteId: siteIdUWeb, autoPageview: false })
+
+export default new Vue({
   router,
   store,
   i18n,

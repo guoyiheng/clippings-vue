@@ -5,6 +5,7 @@ import 'nprogress/nprogress.css' // progress bar style
 import { getToken } from '@/utils/auth' // get token from cookie
 import getPageTitle from '@/utils/get-page-title'
 import Message from '@/components/Snackbar/Snackbar.js'
+import App from './main'
 
 NProgress.configure({ showSpinner: false }) // NProgress Configuration
 
@@ -68,7 +69,14 @@ router.beforeEach(async(to, from, next) => {
   }
 })
 
-router.afterEach(() => {
+router.afterEach((to, from) => {
   // finish progress bar
   NProgress.done()
+  App.$uweb
+    .ready()
+    .then(() => {
+      console.log(to.path)
+      App.$uweb.trackPageview('#' + to.path)
+    })
+    .catch(() => {})
 })

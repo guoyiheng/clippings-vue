@@ -16,7 +16,7 @@ const opts = {
         layoutBg: '#ffffff',
         primaryText: '#212121',
         secondText: '#909399',
-        primaryIcon: '#26A69A',
+        primaryIcon: '#00897B',
         divider: '#ffffff',
         bgColor: '#ffffff',
 
