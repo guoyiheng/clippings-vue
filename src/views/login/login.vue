@@ -45,6 +45,7 @@
               :loading="loading"
               @click:prepend-inner="handleClickPrepend2"
               @click:append="passwordVisibility = !passwordVisibility"
+              @keyup.enter="handleValidate(0)"
             />
           </v-flex>
         </div>
@@ -91,6 +92,7 @@
               counter
               :loading="loading"
               @click:append="passwordVisibility = !passwordVisibility"
+              @keyup.enter="handleValidate(1)"
             />
           </v-flex>
         </div>
@@ -211,6 +213,8 @@ export default {
         } else {
           this.handleRegist()
         }
+      } else {
+        this.loading = false
       }
     },
     handleLogin() {
