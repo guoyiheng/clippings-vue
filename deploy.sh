@@ -1,4 +1,4 @@
-# cd /var/lib/jenkins/workspace/clippings-vue #进入Jenkins工作空间下hxkj项目目录
+cd /var/lib/jenkins/workspace/clippings-vue #进入Jenkins工作空间下hxkj项目目录
 node -v #检测node版本（此条命令非必要）
 npm -v #检测npm版本（此条命令非必要）
 npm config set registry https://registry.npm.taobao.org #把npm源设置为淘宝源（这个你懂的）
