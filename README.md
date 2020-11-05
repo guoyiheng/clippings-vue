@@ -60,7 +60,7 @@ npm run dev
 
 ### 2.1 服务端
 
-项目链接：
+项目链接: [clippings-koa](https://github.com/mypridelife/clippings-koa)
 
 ### 2.2 技术栈
 

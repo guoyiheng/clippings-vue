@@ -158,17 +158,17 @@ export default {
         // },
         { divider: true },
         { icon: 'folder', text: this.$t('layout.clippings') },
-        // { icon: 'favorite', text: this.$t('layout.favorite') },
+        { icon: 'favorite', text: this.$t('layout.favorite') },
         { divider: true },
         { heading: this.$t('layout.files') },
         { icon: 'cloud', text: this.$t('layout.history') },
         { divider: true },
-        // { heading: '用户' },
-        // { icon: 'person', text: this.$t('layout.person') },
-        // { icon: 'settings', text: this.$t('layout.settings') },
-        { icon: 'help', text: this.$t('layout.help') }
-        // { divider: true }
-        // { icon: 'delete', text: '垃圾箱' }
+        { heading: '用户' },
+        { icon: 'person', text: this.$t('layout.person') },
+        { icon: 'settings', text: this.$t('layout.settings') },
+        { icon: 'help', text: this.$t('layout.help') },
+        { divider: true },
+        { icon: 'delete', text: this.$t('layout.delete') }
       ]
     }
   },

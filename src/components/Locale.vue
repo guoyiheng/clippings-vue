@@ -67,11 +67,10 @@ export default {
 
       if (locale === 'zh') {
         localStorage.setItem('locale', 'en')
-        this.$i18n.locale = localStorage.getItem('locale')
       } else {
         localStorage.setItem('locale', 'zh')
-        this.$i18n.locale = localStorage.getItem('locale')
       }
+      this.$i18n.locale = localStorage.getItem('locale')
     }
   }
 }
