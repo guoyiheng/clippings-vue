@@ -11,6 +11,6 @@ npm run build #打包
 APP_NAME="kindle.gyh.cool"
 dstr=`date +%Y-%m-%d-%H-%M-%S`
 
-mv ./dist /usr/local/openresty/nginx/html/${APP_NAME}-${dstr}
-rm -rf /usr/local/openresty/nginx/html/${APP_NAME}
-ln -s /usr/local/openresty/nginx/html/${APP_NAME}-${dstr} /usr/local/openresty/nginx/html/${APP_NAME}
+mv ./dist /www/wwwroot/${APP_NAME}-${dstr}
+rm -rf /www/wwwroot/${APP_NAME}
+ln -s /www/wwwroot/${APP_NAME}-${dstr} /www/wwwroot/${APP_NAME}
