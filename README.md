@@ -8,7 +8,7 @@
 
 有兴趣的同学可访问
 
-:link:[https://wwww.guoyiheng.xyz](https://wwww.guoyiheng.xyz)
+:link:[https://kindle.gyh.cool](https://kindle.gyh.cool)
 
 (可正常走注册登录流程，也可使用测试账号，账号：111111 密码：111111)
 
